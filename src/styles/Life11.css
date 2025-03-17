@@ -1,0 +1,75 @@
+.life11-container {
+    padding: 20px;
+    font-family: "Barlow", sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .life11-title {
+    color: #21335b;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .life11-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .life11-table th {
+    background-color: #21335b;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .life11-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #303030;
+    font-size: 16px; /* tamanho da fonte */
+    font-weight: bold; /* Destacar os números */
+    text-align: center;
+  }
+  
+  .life11-table tbody tr:nth-child(even) {
+    background-color: #FFC176;
+  }
+  
+  .life11-table tbody tr:hover {
+    background-color: rgba(33, 51, 91, 0.1);
+  }
+  
+  .life11-loading {
+    color: #303030;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .carteira-btn {
+    display: inline-block;
+    background-color: #21335b;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .carteira-btn:hover {
+    background-color: rgba(33, 51, 91, 0.1); /* Efeito hover igual ao da tabela */
+    color: #21335b;
+    border: 2px solid #21335b;
+  }
+  
