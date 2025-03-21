@@ -1,62 +1,103 @@
+/* 📌 CONTAINER PRINCIPAL */
 .life11-container {
     padding: 20px;
     font-family: "Barlow", sans-serif;
     background-color: #f8f9fa;
     min-height: 100vh;
-  }
-  
-  .life11-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* 📌 TÍTULO */
+.life11-title {
     color: #21335b;
+    margin-top: -10px;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-  }
-  
-  .life11-table {
+    text-align: center;
+}
+
+/* 📌 CONTAINER DOS INDICADORES */
+.indicadores-container {
     width: 100%;
-    border-collapse: collapse;
-    background: white;
+    max-width: 1200px;
+    background: rgb(223, 215, 215);
+    padding: 20px;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .life11-table th {
-    background-color: #21335b;
-    color: white;
-    padding: 10px;
+}
+
+/* 📌 TÍTULO DOS INDICADORES */
+.indicadores-title {
+    font-size: 20px;
+    color: #21335b;
     text-align: center;
-  }
-  
-  .life11-table td {
+    margin-bottom: 15px;
+}
+
+/* 📌 GRID DOS INDICADORES */
+.indicadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-    color: #303030;
-    font-size: 16px; /* tamanho da fonte */
-    font-weight: bold; /* Destacar os números */
+}
+
+/* 📌 CADA BLOCO DE INDICADOR */
+.indicador-item {
+    background: #f0f2f5;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-  }
-  
-  .life11-table tbody tr:nth-child(even) {
-    background-color: #FFC176;
-  }
-  
-  .life11-table tbody tr:hover {
-    background-color: rgba(33, 51, 91, 0.1);
-  }
-  
-  .life11-loading {
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* 📌 HOVER PARA DESTACAR QUANDO O USUÁRIO PASSAR O MOUSE */
+.indicador-item:hover {
+    background: #e0e3e7; /* Um pouco mais escuro ao passar o mouse */
+}
+
+/* 📌 NOME DO INDICADOR */
+.indicador-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #21335b;
+}
+
+/* 📌 VALOR DO INDICADOR */
+.indicador-value {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* 📌 MENSAGEM DE CARREGAMENTO */
+.indicadores-loading {
     color: #303030;
     font-size: 18px;
     margin-top: 20px;
-  }
-  .button-container {
-    margin-top: 20px;
     text-align: center;
-  }
-  
-  .carteira-btn {
-    display: inline-block;
+}
+
+/* 📌 CONTAINER DE BOTÕES - AGORA TODOS NA MESMA LINHA */
+.button-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os botões */
+    flex-wrap: wrap; /* Permite ajuste automático se faltar espaço */
+}
+
+/* 📌 BOTÕES */
+.carteira-btn {
     background-color: #21335b;
     color: white;
     padding: 12px 24px;
@@ -64,12 +105,93 @@
     font-size: 16px;
     font-weight: bold;
     border-radius: 6px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .carteira-btn:hover {
-    background-color: rgba(33, 51, 91, 0.1); /* Efeito hover igual ao da tabela */
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* 📌 HOVER */
+.carteira-btn:hover {
+    background-color: white;
     color: #21335b;
     border: 2px solid #21335b;
-  }
-  
+    transform: scale(1.05);
+}
+
+/* 📌 RESPONSIVIDADE */
+
+/* 📱 Estilo para tablets (máx. 900px) */
+@media (max-width: 900px) {
+    .indicadores-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* 📱 Ajustes para celulares (máx. 600px) */
+@media (max-width: 600px) {
+    .indicadores-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px; /* Menos espaço entre os botões */
+    }
+
+    .indicador-label {
+        font-size: 12px;
+    }
+
+    .indicador-value {
+        font-size: 14px;
+    }
+
+    /* BOTÃO EM TELA PEQUENA */
+    .carteira-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* 📌 CONTAINER DO TOOLTIP */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* 📌 ÍCONE DE INFORMAÇÃO */
+.info-icon {
+    color: #21335b;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* 📌 TEXTO DO TOOLTIP */
+.tooltip-text {
+    visibility: hidden;
+    width: 180px;
+    background-color: #21335b;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    
+    position: absolute;
+    z-index: 10;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 📌 MOSTRAR TOOLTIP AO PASSAR O MOUSE */
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}

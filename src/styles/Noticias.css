@@ -1,0 +1,70 @@
+.noticias-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+#noticias {
+    text-align: center;
+    margin-top: -40px; /* Reduzindo a distância do topo */
+    margin-bottom: 35px; /* Ajustando a distância para os cards */
+    font-size: 28px;
+    font-weight: bold;
+    color: #21335b;
+  }
+  
+p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Lista de notícias */
+.noticias-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilo do card da notícia */
+.noticia-card {
+    display: flex;
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.noticia-card:hover {
+    transform: scale(1.02);
+}
+
+/* Imagem da notícia */
+.noticia-imagem {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Texto da notícia */
+.noticia-texto {
+    padding: 15px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.noticia-texto h2 {
+    font-size: 18px;
+    color: #21335b;
+    margin-bottom: 5px;
+}
+
+.noticia-texto p {
+    font-size: 14px;
+    color: #555;
+}

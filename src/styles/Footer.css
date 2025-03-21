@@ -1,7 +1,18 @@
 .footer {
-    background-color: #21335b;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
+  background-color: #21335b;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
 }
+
+#footer-text {
+  color: white !important;
+}
+
+@media (max-width: 480px) {
+    .footer {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+  

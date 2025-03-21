@@ -1,0 +1,152 @@
+/* 📌 CONTAINER PRINCIPAL */
+.lred11-container {
+    padding: 20px;
+    font-family: "Barlow", sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* 📌 TÍTULO */
+.lred11-title {
+    color: #21335b;
+    margin-top: -10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 📌 CONTAINER DOS INDICADORES */
+.indicadores-container {
+    width: 100%;
+    max-width: 1200px;
+    background: rgb(223, 215, 215);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 TÍTULO DOS INDICADORES */
+.indicadores-title {
+    font-size: 20px;
+    color: #21335b;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* 📌 GRID DOS INDICADORES */
+.indicadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+/* 📌 CADA BLOCO DE INDICADOR */
+.indicador-item {
+    background: #f0f2f5;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* 📌 HOVER PARA DESTACAR QUANDO O USUÁRIO PASSAR O MOUSE */
+.indicador-item:hover {
+    background: #e0e3e7; /* Um pouco mais escuro ao passar o mouse */
+}
+
+/* 📌 NOME DO INDICADOR */
+.indicador-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #21335b;
+}
+
+/* 📌 VALOR DO INDICADOR */
+.indicador-value {
+    font-size: 16px;
+    color: #333;
+}
+
+/* 📌 MENSAGEM DE CARREGAMENTO */
+.indicadores-loading {
+    color: #303030;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* 📌 CONTAINER DE BOTÕES */
+.button-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* 📌 BOTÕES */
+.carteira-btn {
+    background-color: #21335b;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* 📌 HOVER */
+.carteira-btn:hover {
+    background-color: white;
+    color: #21335b;
+    border: 2px solid #21335b;
+    transform: scale(1.05);
+}
+
+/* 📌 RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .indicadores-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .indicadores-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .indicador-label {
+        font-size: 12px;
+    }
+
+    .indicador-value {
+        font-size: 14px;
+    }
+
+    .carteira-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+    }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../../../styles/OperacaoDetalhes.css";
 
 const operacoesDetalhes = {
@@ -22,7 +22,16 @@ const operacoesDetalhes = {
     impostosAbertos: "R$ 10,000,000.00",
     dataEmissao: "05/11/2021",
     rgsdTs: "130%",
-    ifmTs: "130%"
+    ifmTs: "130%",
+    codigoCetip: "123456",
+    PU: "R$ 1,000.00",
+    quantidadeCotas: "1,000,000",
+    Responsável: "João da Silva"
+  },
+  "cri-vanvera": {
+    cidade: "Barra dos Coqueiros",
+    ifm: "77.0%",
+    rgsd: "56.4%",
   }
 };
 
@@ -48,6 +57,16 @@ const OperacaoDetalhes = () => {
       ) : (
         <p className="operacao-loading">Dados não encontrados.</p>
       )}
+
+      {/* 📌 BOTÕES ABAIXO DOS INDICADORES */}
+      <div className="operacao-buttons">
+        <Link to={`/fundos/life11/${nome}/evolucao-vendas`} className="operacao-btn">
+          📊 Evolução de Vendas
+        </Link>
+        <Link to={`/fundos/life11/${nome}/inadimplencia`} className="operacao-btn">
+          📉 Histórico de Inadimplência
+        </Link>
+      </div>
     </div>
   );
 };

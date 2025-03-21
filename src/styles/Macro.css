@@ -1,0 +1,72 @@
+.container {
+    padding: 20px;
+    font-family: "Barlow", sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #21335b;
+    font-size: 28px;
+    margin-top: -15px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* 📌 TABELA */
+.macro-table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.macro-table th, .macro-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.macro-table th {
+    background-color: #21335b;
+    color: white;
+    font-size: 18px;
+}
+
+.macro-table td {
+    font-size: 16px;
+    color: #333;
+}
+
+.macro-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.macro-table tr:hover {
+    background-color: #e8e8e8;
+    transition: 0.3s;
+}
+
+/* 📌 RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .macro-table {
+        width: 90%;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .macro-table th, .macro-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

@@ -4,7 +4,7 @@ import "../../styles/Fundos.css";
 
 const Fundos = () => (
   <div className="fundos-container">
-    <h1>Nossos Fundos</h1>
+    <h1 id="titulo-fundos">Nossos Fundos</h1>
     <div className="fundos-grid">
       <Link to="/fundos/life11" className="fundo-card"><h2>LIFE11</h2></Link>
       <Link to="/fundos/lred11" className="fundo-card"><h2>LRED11</h2></Link>

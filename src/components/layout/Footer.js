@@ -4,7 +4,7 @@ import "../../styles/Footer.css";
 
 const Footer = () => (
   <footer className="footer">
-    <p>© {new Date().getFullYear()} Life Capital Partners. Todos os direitos reservados.</p>
+    <p id="footer-text">© {new Date().getFullYear()} Life Capital Partners. Todos os direitos reservados.</p>
   </footer>
 );
 
